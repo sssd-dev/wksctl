@@ -37,3 +37,21 @@ items:
         private:
           address: 172.17.8.102
           port: 22
+- apiVersion: cluster.k8s.io/v1alpha1
+  kind: Machine
+  metadata:
+    name: worker-2
+    namespace: weavek8sops
+    labels:
+      set: worker
+  spec:
+    providerSpec:
+      value:
+        apiVersion: baremetalproviderspec/v1alpha1
+        kind: BareMetalMachineProviderSpec
+        public:
+          address: 127.0.0.1
+          port: 2232
+        private:
+          address: 172.17.8.103
+          port: 22
