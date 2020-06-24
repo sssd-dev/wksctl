@@ -4,7 +4,8 @@ items:
 - apiVersion: cluster.k8s.io/v1alpha1
   kind: Machine
   metadata:
-    generateName: master-
+    name: master
+    namespace: weavek8sops
     labels:
       set: master
   spec:
@@ -21,7 +22,8 @@ items:
 - apiVersion: cluster.k8s.io/v1alpha1
   kind: Machine
   metadata:
-    generateName: worker-
+    name: worker-1
+    namespace: weavek8sops
     labels:
       set: worker
   spec:
@@ -38,7 +40,8 @@ items:
 - apiVersion: cluster.k8s.io/v1alpha1
   kind: Machine
   metadata:
-    generateName: worker-
+    name: worker-2
+    namespace: weavek8sops
     labels:
       set: worker
   spec:
